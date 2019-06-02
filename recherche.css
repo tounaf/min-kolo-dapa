@@ -1,0 +1,112 @@
+nav ul 
+{
+	list-style-type:none;
+}
+nav ul li 
+{
+	display: inline-block;
+	border : 1px black solid;
+	padding : 3px;
+}
+nav ul li a 
+{
+	text-decoration : none;
+	color : black;
+}
+.logo
+{
+	display: inline-block;
+	width: 200px;
+	height : 50px;
+	border : blue 2px dotted;
+	text-align: center;
+	padding-top: 30px;
+	border-radius : 12px;
+}
+.globalrech
+{
+	display: inline-block;
+	width : 300px;
+}
+.globalrech .textglobal
+{
+	margin-left :20px;
+	display: inline;
+	width : 150px;
+	height : 20px;
+	border : blue solid 2px;
+	border-radius : 4px;
+}
+.globalrech .button_rech
+{
+	display : inline;
+	background-color: white;
+	border: none;
+	color :black;
+}
+.recherche_par
+{
+	width: 100%;
+	display: block;
+	margin : auto;
+	padding: 10px;
+}
+.conteneur_label
+{
+	margin-top : 5px;
+	margin-bottom : 5px;
+}
+.label_nom, .label_discipline, .label_honor
+{
+	display: inline-block;
+	width : 200px;
+}
+.recherchenom
+{
+	border : 2px rgb(177,194,140) solid;
+	background-color: rgb(236,240,223);
+
+}
+.recherchenom:focus
+{
+	border : 2px green solid;
+	background-color: rgb(177,194,140);
+}
+.rechercheart
+{
+	border : 2px rgb(113, 187,216) solid;
+	background-color: rgb(219,238,234);
+}
+.rechercheart:focus
+{
+	border : 2px blue solid;
+	background-color: rgb(113, 187, 216);
+}
+
+.honor 
+{
+	border : 2px rgb(177, 86,85) solid;
+	background-color: rgb(235,222,216);
+}
+.honor:focus
+{
+	border : 2px red solid;
+	background-color : rgb(177, 86,85);
+}
+table 
+{
+	border-collapse : collapse;
+}
+td, th
+{
+	border: 1px rgb(98, 170, 167) solid;
+}
+tr th
+{
+	color : rgb(52, 132, 141);
+}
+tr td 
+{
+	background-color : rgb(210, 235, 242);
+	color: rgb(52, 132, 141);
+}
