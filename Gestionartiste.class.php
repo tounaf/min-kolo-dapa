@@ -99,5 +99,47 @@ class Gestionartiste
 		$requete->bindValue(':photo', utf8_decode($artiste->getphoto()));
 		$requete->execute();
 	}
+
+	public function recherche_nom_pseudo($nom)
+	{
+		$requete = $this->db->prepare("SELECT * FROM artistes WHERE nom Like :nom or pseudo LIKE :pseudo");
+		$result = array();
+		$requete->bindValue(':nom', utf8_decode('%'.$nom.'%'));
+		$requete->bindValue(':pseudo', utf8_decode('%'.$nom.'%'));
+		$requete->execute();
+		while($donne = $requete->fetch(PDO::FETCH_ASSOC))
+		{
+			$result[] = new Artiste($donne); 
+		}
+		return $result;
+
+	}
+
+	public function recherche_discipline($discipline)
+	{
+		$resultat = array();
+		$requete = $this->db->prepare("SELECT * FROM artistes WHERE discipline LIKE :discipline");
+		$requete->bindValue(":discipline",  utf8_decode('%'.$discipline.'%'));
+		$requete->execute();
+		while($donne = $requete->fetch(PDO::FETCH_ASSOC))
+		{
+			$resultat[] = new Artiste($donne);
+		}
+		return $resultat;
+
+	}
+
+	// public function selectAll($nom = "", $discipline = "" , $disctinction = "", $c_plastique="",$c_culture = "", $c_dessin ="", $c_peinture = "", $c_photographie = "", $c_stylisme="")
+	// {
+	// 	$resultat = array();
+	// 	$requete = $this->db->prepare("SELECT * FROM artistes WHERE nom LIKE :nom and discipline LIKE :discipline and distinction LIKE :distinction and ");
+	// 	$requete->bindValue(":discipline",  utf8_decode('%'.$discipline.'%'));
+	// 	$requete->execute();
+	// 	while($donne = $requete->fetch(PDO::FETCH_ASSOC))
+	// 	{
+	// 		$resultat[] = new Artiste($donne);
+	// 	}
+	// 	return $resultat;
+	// }
 }
  ?>

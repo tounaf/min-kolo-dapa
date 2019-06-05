@@ -9,7 +9,7 @@
 	<?php 
 		include('nav.php');
 	 ?>
-		<form method = "post" action = "#">
+		<form method = "post" action = "resultat.php">
 			<fieldset>
 				<legend>page de recherche</legend>
 				<div class = "logo" >logo de l'outil</div>
